@@ -138,7 +138,11 @@ class Invoice implements InvoiceInterface
      */
     protected $paymentTotals;
 
-
+    /**
+     * @var string
+     */
+    protected $paymentCurrencies;
+    
     /**
      * @inheritdoc
      */
@@ -807,6 +811,20 @@ class Invoice implements InvoiceInterface
     {
         if (!empty($paymentTotals)) {
             $this->paymentTotals = $paymentTotals;
+        }
+
+        return $this;
+    }
+    
+     /**
+     * @param string $paymentCurrencies
+     *
+     * @return InvoiceInterface
+     */
+    public function setPaymentCurrencies($paymentCurrencies)
+    {
+        if (!empty($paymentCurrencies)) {
+            $this->paymentCurrencies = $paymentCurrencies;
         }
 
         return $this;
