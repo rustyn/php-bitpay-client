@@ -171,6 +171,7 @@ class Client implements ClientInterface
             'itemDesc'          => $item->getDescription(),
             'itemCode'          => $item->getCode(),
             'physical'          => $item->isPhysical(),
+            'paymentCurrencies' => array($invoice->getPaymentCurrencies()),
             'buyerName'         => trim(sprintf('%s %s', $buyer->getFirstName(), $buyer->getLastName())),
             'buyerAddress1'     => isset($buyerAddress[0]) ? $buyerAddress[0] : '',
             'buyerAddress2'     => isset($buyerAddress[1]) ? $buyerAddress[1] : '',
