@@ -369,4 +369,9 @@ interface InvoiceInterface
     public function getAmountPaid();
 
     public function getExchangeRates();
+    
+    /**
+     * @return array
+     */
+    public function getPaymentCurrencies();
 }
