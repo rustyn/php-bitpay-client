@@ -139,7 +139,7 @@ class Invoice implements InvoiceInterface
     protected $paymentTotals;
 
     /**
-     * @var string
+     * @var array
      */
     protected $paymentCurrencies;
     
@@ -817,8 +817,7 @@ class Invoice implements InvoiceInterface
     }
     
      /**
-     * @param string $paymentCurrencies
-     *
+     * @param
      * @return InvoiceInterface
      */
     public function setPaymentCurrencies($paymentCurrencies)
@@ -828,5 +827,14 @@ class Invoice implements InvoiceInterface
         }
 
         return $this;
+    }
+
+    /**
+     * @param array
+     * @return InvoiceInterface
+     */
+    public function getPaymentCurrencies()
+    {
+        return $this->paymentCurrencies;
     }
 }
